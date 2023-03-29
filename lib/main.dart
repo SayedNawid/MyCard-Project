@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-  const MyWidget()
-  );
+  runApp(const MyWidget());
 }
+
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
 
@@ -15,11 +14,15 @@ class MyWidget extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.lightBlue,
         appBar: AppBar(
-          title:const Center(child: Text("I am a Rich man")),
+          title: const Center(child: Text("I am a Rich man")),
         ),
-        body: const Center(
-          child: Image(
-            image: AssetImage('images/asd.jpg'),
+        body: SafeArea(
+          child:  Container(
+            child: Center(
+              child: Image(
+                image: AssetImage('images/asd.jpg'),
+              ),
+            ),
           ),
         ),
       ),
