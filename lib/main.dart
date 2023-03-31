@@ -12,19 +12,39 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
-          title: const Center(child: Text("I am a Rich man")),
+          title: const Center(child: Text("MyCard")),
+          backgroundColor: Color.fromARGB(255, 90, 117, 121),
         ),
         body: SafeArea(
-          child:  Container(
-            child: Center(
-              child: Image(
-                image: AssetImage('images/asd.jpg'),
+            child: Column(
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('images/asd.jpg'),
+            ),
+            Text(
+              "Mr.CatAvatar",
+              style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
             ),
-          ),
-        ),
+            Text(
+              "FLUTTER DEVELOPER",
+              style: TextStyle(
+                fontFamily: "Source Sans Pro",
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2.5,
+                color: Colors.teal[100],
+              ),
+            ),
+          ],
+        )),
       ),
     );
   }
